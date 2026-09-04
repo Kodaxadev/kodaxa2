@@ -1,0 +1,19 @@
+.sassanos-project { display: block; position: relative; isolation: isolate; min-height: 640px; background: #151712; color: #eee9db; margin-bottom: 35px; overflow: hidden; }
+.sassanos-project > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1s; z-index: -3; }
+.sassanos-project:hover > img { transform: scale(1.03); }
+.sassanos-project-shade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, #101510c9, transparent 85%); }
+.sassanos-project-copy { padding: 40px 46px 100px; position: relative; z-index: 1; }
+.sassanos-project-copy > .mono { color: #d2b787; font-size: 12px; }
+.sassanos-project h3 { font-size: 23px; letter-spacing: -.04em; margin-top: 48px; font-weight: 750; }
+.sassanos-project-title { font-size: clamp(50px, 5.6vw, 90px); line-height: 1; letter-spacing: -.07em; font-weight: 600; margin-block: 22px 25px; }
+.sassanos-project-copy > p:not(.mono):not(.sassanos-project-title) { font-size: 16px; line-height: 1.65; color: #cbcbbb; }
+.sassanos-project-link { display: inline-flex; gap: 35px; align-items: center; margin-top: 30px; font-size: 14px; padding-bottom: 13px; border-bottom: 1px solid #e1d8c5; }
+.sassanos-project-tag { position: absolute; bottom: 27px; left: 46px; font-size: 12px; color: #d5c8ac; }
+.sassanos-project-origin { position: absolute; bottom: 27px; right: 38px; text-align: right; font-size: 12px; line-height: 1.6; text-transform: uppercase; letter-spacing: .04em; }
+@media (max-width: 700px) {
+  .sassanos-project { min-height: 670px; } .sassanos-project > img { object-position: 65% center; }
+  .sassanos-project-shade { background: linear-gradient(90deg, #101510bb, #10151022), linear-gradient(0deg, #101510cc, transparent); }
+  .sassanos-project-copy { padding: 28px 26px 110px; } .sassanos-project-copy > .mono { max-width: 220px; line-height: 1.7; }
+  .sassanos-project h3 { margin-top: 70px; } .sassanos-project-title { font-size: clamp(45px, 10.7vw, 70px); }
+  .sassanos-project-tag { left: 26px; right: 26px; font-size: 12px; } .sassanos-project-origin { display: none; }
+}

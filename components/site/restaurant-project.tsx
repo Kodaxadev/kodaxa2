@@ -37,7 +37,7 @@ export function RestaurantProject() {
         />
       </div>
       <span className="restaurant-project-tag mono">
-        01 / Restaurant & hospitality
+        02 / Restaurant & hospitality
       </span>
     </Link>
   );

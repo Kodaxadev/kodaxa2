@@ -11,6 +11,7 @@ import {
 import { projects } from '@/lib/projects';
 import Image from 'next/image';
 import { RestaurantProject } from './restaurant-project';
+import { SassanosProject } from './sassanos-project';
 
 export function Work() {
   return (
@@ -36,6 +37,7 @@ export function Work() {
           We make yours worth a closer look.
         </p>
       </div>
+      <SassanosProject />
       <RestaurantProject />
       <div className="project-grid">
         {projects.map((project, index) => (
@@ -86,7 +88,7 @@ export function Work() {
                 </div>
                 <div className="project-caption">
                   <div>
-                    <span className="project-number mono">0{index + 2}</span>
+                    <span className="project-number mono">0{index + 3}</span>
                     <span className="project-name">{project.name}</span>
                   </div>
                   <span>{project.category}</span>

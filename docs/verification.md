@@ -32,3 +32,14 @@ The showcase brands are fictional concepts and are labeled accordingly. Contact 
 - Production preview HTTP checks pass for the home page, direct restaurant URL, trailing-slash URL, HEAD request and image asset; unknown pages return 404 and POST returns 405. A fresh direct browser load renders the concept, and selecting Sides shows its four items.
 
 Ordering, directions and telephone are real external destinations; no order, phone call, restaurant message or reservation was submitted during testing. Menu availability and service hours are not live-synchronized. Sources and those limits are recorded in `las-mananitas-research.md`.
+
+## Sassano’s addition
+
+- Live official-site research verified the address, phone, posted hours, merchandise, and historical milestones. Independent copy review corrected the Montana Silversmiths brand spelling. Conflicting reporting on generation counts was resolved by omitting the count.
+- The initial coherent route returned HTTP 200 and was opened in the existing preview tab.
+- TypeScript and lint pass. The static build exports the studio, Las Mañanitas, and Sassano’s routes.
+- Independent source review identified a skip-link contrast issue and Escape focus loss; both were corrected. The skip link has an explicit dark foreground and Escape now focuses the mobile menu trigger.
+- Three local WebP images total 279,290 bytes: generated representative campaign art, an actual archival photo, and the actual storefront. Credits and the illustrative-image distinction appear on the page.
+- Authored files remain under 400 lines, and dependencies are unchanged. The existing restaurant content and route remain in the site.
+- This pass used source and compilation checks. Browser interaction testing and visual QA were not performed; no responsive or interaction test pass is claimed.
+- No calls, directions requests, owner inquiries, or orders were submitted. Hours and merchandise are a sourced snapshot, not a live inventory system. Detailed evidence, limitations, and an unsent pitch draft are in `sassanos-pitch-research.md`.

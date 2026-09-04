@@ -33,7 +33,7 @@ export function Header() {
       </a>
       <nav className="desktop-nav" aria-label="Main navigation">
         <a href="#work">
-          The work <span>03</span>
+          The work <span>04</span>
         </a>
         <a href="#services">What we do</a>
         <a href="#about">The studio</a>
