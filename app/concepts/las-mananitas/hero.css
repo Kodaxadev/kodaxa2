@@ -1,0 +1,34 @@
+.lm-hero { display: grid; grid-template-columns: 1.04fr 1fr; gap: 0 30px; padding-top: clamp(45px,5vw,86px); }
+.lm-hero-copy { position: relative; z-index: 2; padding-top: 20px; }
+.lm-hero .lm-eyebrow { display: flex; align-items: center; gap: 8px; }
+.lm-hero .lm-eyebrow span { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+.lm h1 { position: relative; margin: 29px 0 24px; font-size: clamp(58px,7.45vw,119px); line-height: .98; letter-spacing: -.065em; font-weight: 500; }
+.lm h1 em { white-space: nowrap; font-weight: 400; }
+.lm-hero-description { max-width: 330px; font-size: 12px; line-height: 1.95; color: var(--lm-ink); margin-bottom: 26px; }
+.lm-hero-links { display: flex; align-items: center; gap: 23px; flex-wrap: wrap; }
+.lm-hero-order { display: inline-flex; align-items: center; gap: 9px; font-size: 10px; padding-block: 10px; border-bottom: 1px solid currentColor; }
+.lm-hero-origin { display: flex; gap: 12px; align-items: center; margin-top: 33px; font-size: 10px; line-height: 1.8; }
+.lm-hero-origin span { color: #7d5950; }
+.lm-hero-visual { position: relative; margin-left: 10px; padding-top: 0; }
+.lm-photo-arch { width: 100%; height: clamp(440px,46vw,700px); border-radius: 48% 48% 2px 2px; overflow: hidden; background: #aa7e4b; }
+.lm-photo-arch img { width: 100%; height: 100%; object-fit: cover; object-position: 45% center; transition: transform 1.5s; animation: lm-photo-in 1.3s both; }
+.lm-photo-arch:hover img { transform: scale(1.055); }
+.lm-sun-seal { position: absolute; top: 28%; right: -22px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; height: 136px; width: 136px; border-radius: 50%; background: var(--lm-yellow); color: var(--lm-red); outline: 1px solid var(--lm-red); outline-offset: -9px; transform: rotate(10deg); animation: lm-seal 8s ease-in-out infinite; }
+.lm-sun-seal span { font-size: 10px; line-height: 1.2; text-align: center; }
+.lm-sun-seal em { font-family: var(--font-lm-serif),serif; font-size: 24px; letter-spacing: -.05em; }
+.lm-hero-note { position: absolute; left: -25px; top: -30px; z-index: 3; max-width: 180px; font-size: 26px; line-height: .95; transform: rotate(-9deg); }
+.lm-photo-caption { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 20px 0 0; font-family: var(--font-lm-serif),serif; font-size: 23px; }
+.lm-photo-caption small { font-family: var(--font-manrope),sans-serif; display: block; font-size: 8px; font-weight: 600; letter-spacing: .14em; margin-bottom: 6px; }
+.lm-hero-bottom { grid-column: 1/-1; display: flex; align-items: center; justify-content: space-between; padding-block: 45px 28px; font-size: 9px; letter-spacing: .05em; }
+.lm-hero-bottom>span:first-child { font-family: var(--font-lm-serif),serif; font-style: italic; font-size: 18px; letter-spacing: -.03em; }
+.lm-hero-bottom>span:last-child { display: flex; align-items: center; gap: 20px; }
+.lm-marquee { background: var(--lm-red); color: var(--lm-cream); padding-block: 20px; overflow: hidden; border-block: 4px double var(--lm-cream); outline: 1px solid var(--lm-red); }
+.lm-marquee>div { display: flex; width: max-content; animation: lm-marquee 44s linear infinite; }
+.lm-marquee span { display: inline-flex; align-items: center; white-space: nowrap; gap: 40px; padding-right: 40px; font-size: 11px; letter-spacing: .16em; }
+.lm-marquee svg { width: 20px; height: 20px; stroke-width: 1; }
+@keyframes lm-marquee { to { transform: translateX(-50%); } }
+@keyframes lm-seal { 50% { transform: rotate(-7deg); } }
+@keyframes lm-photo-in { from { opacity: .4; transform: scale(1.08); } to { opacity: 1; transform: scale(1); } }
+@media(max-width:700px) { .lm .lm-hero h1 { font-size: clamp(48px,15.4vw,82px); } .lm .lm-hero-note { top: -45px; } }
+@media(max-width:1000px) { .lm-hero { gap: 20px; } .lm h1 { font-size: 7.7vw; } .lm-photo-arch { height: 520px; } .lm-hero-origin { margin-top: 23px; } .lm-sun-seal { width: 115px; height: 115px; right: -20px; } }
+@media(max-width:700px) { .lm-hero { grid-template-columns: 1fr; padding-top: 26px; } .lm-hero-copy { padding-top: 0; } .lm h1 { font-size: clamp(60px,12vw,82px); margin-top: 23px; } .lm-hero-description { max-width: 370px; font-size: 12px; } .lm-hero-origin { margin-top: 23px; } .lm-hero-visual { margin: 47px 10px 0 0; } .lm-photo-arch { height: 440px; border-radius: 48% 48% 2px 2px; } .lm-hero-note { left: 9px; top: -30px; font-size: 27px; } .lm-sun-seal { right: -22px; top: 33%; } .lm-photo-caption { font-size: 21px; } .lm-hero-bottom { padding-block: 20px 12px; } .lm-hero-bottom>span:last-child { font-size: 0; gap: 0; } .lm-hero-bottom>span:last-child svg { width: 18px; height: 18px; } .lm-marquee { padding-block: 16px; } }

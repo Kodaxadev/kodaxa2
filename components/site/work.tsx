@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/dialog';
 import { projects } from '@/lib/projects';
 import Image from 'next/image';
+import { RestaurantProject } from './restaurant-project';
 
 export function Work() {
   return (
@@ -35,6 +36,7 @@ export function Work() {
           We make yours worth a closer look.
         </p>
       </div>
+      <RestaurantProject />
       <div className="project-grid">
         {projects.map((project, index) => (
           <Dialog key={project.id}>
@@ -84,7 +86,7 @@ export function Work() {
                 </div>
                 <div className="project-caption">
                   <div>
-                    <span className="project-number mono">0{index + 1}</span>
+                    <span className="project-number mono">0{index + 2}</span>
                     <span className="project-name">{project.name}</span>
                   </div>
                   <span>{project.category}</span>
@@ -142,7 +144,7 @@ export function Work() {
         ))}
       </div>
       <div className="work-note">
-        <p>Two imagined brands. A very real attention to detail.</p>
+        <p>Independent concepts. A very real attention to detail.</p>
         <ArrowDownRight size={24} strokeWidth={1.2} />
       </div>
     </section>

@@ -1,0 +1,39 @@
+.lm-menu-section { background: #f1e6ce; padding-top: 85px; padding-bottom: 55px; }
+.lm-menu-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
+.lm-menu-heading .lm-eyebrow { margin-bottom: 22px; }
+.lm-menu-heading>p { font-size: 11px; line-height: 1.9; padding-bottom: 8px; }
+.lm-menu-categories { display: flex; gap: 26px; border: 0; padding: 0; min-width: 0; overflow-y: hidden; border-bottom: 1px solid var(--lm-line); margin-top: 40px; }
+.lm-menu-categories button { position: relative; background: transparent; border: 0; padding: 17px 2px 20px; color: #7b5b50; font-size: 14px; white-space: nowrap; }
+.lm-menu-categories button[aria-pressed='true'] { color: var(--lm-red); font-weight: 700; }
+.lm-menu-categories button[aria-pressed='true']::after { content: ''; height: 3px; position: absolute; bottom: -1px; inset-inline: 0; background: var(--lm-red); }
+.lm-menu-categories sup { font-family: var(--font-geist-mono),monospace; font-size: 8px; margin-left: 8px; }
+.lm-menu-categories button:hover { color: var(--lm-red); }
+.lm-menu-layout { display: grid; grid-template-columns: 1.6fr .8fr; gap: 65px; margin-top: 32px; }
+.lm-category-intro { min-height: 84px; }
+.lm-category-intro .lm-handwritten { font-size: 33px; line-height: 1; }
+.lm-category-intro p { font-size: 10px; margin-top: 9px; color: #755347; }
+.lm-dishes { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; align-content: start; column-gap: 35px; animation: lm-rise .35s both; }
+.lm-dish { padding-block: 17px; border-bottom: 1px solid #762e2b20; }
+.lm-dish-name { display: flex; gap: 8px; align-items: baseline; }
+.lm-dish-name h4 { margin: 0; font-size: 18px; line-height: 1.3; letter-spacing: -.04em; }
+.lm-dish-dots { flex-grow: 1; border-bottom: 1px dotted #762e2b50; min-width: 10px; }
+.lm-dish-price { font-size: 12px; font-variant-numeric: tabular-nums; font-weight: 650; white-space: nowrap; }
+.lm-dish>p { color: #755347; font-size: 10px; line-height: 1.75; margin-top: 8px; }
+.lm-favorite { display: inline-flex; align-items: center; gap: 5px; margin-top: 8px; font-size: 8px; text-transform: uppercase; letter-spacing: .07em; }
+.lm-menu-fine { max-width: 580px; font-size: 9px; line-height: 1.9; color: #755347; margin-top: 25px; }
+.lm-menu-fine a { display: inline-flex; align-items: center; text-decoration: underline; gap: 3px; }
+.lm-menu-feature { align-self: start; margin-top: 12px; background: var(--lm-red); color: var(--lm-cream); }
+.lm-feature-photo { position: relative; height: 290px; overflow: hidden; }
+.lm-feature-photo img { width: 100%; height: 100%; object-fit: cover; }
+.lm-feature-label { position: absolute; bottom: 18px; left: 18px; background: var(--lm-cream); color: var(--lm-red); padding: 8px 10px; font-size: 7px; font-weight: 700; letter-spacing: .13em; }
+.lm-feature-copy { padding: 25px 26px 30px; }
+.lm-feature-copy>.lm-handwritten { display: block; color: var(--lm-yellow); font-size: 25px; transform: rotate(-4deg); }
+.lm-feature-copy h3 { font-size: 49px; letter-spacing: -.04em; line-height: 1.02; margin-top: 18px; }
+.lm-feature-copy>p { font-size: 10px; line-height: 1.9; max-width: 240px; margin-top: 18px; }
+.lm-feature-copy .lm-text-link { display: flex; font-size: 10px; margin-top: 17px; }
+.lm-dinner-note { display: flex; align-items: center; justify-content: space-between; gap: 30px; border-top: 1px solid var(--lm-line); margin-top: 48px; padding-top: 35px; }
+.lm-dinner-note h3 { font-size: 30px; letter-spacing: -.04em; margin-top: 7px; }
+.lm-dinner-note .lm-eyebrow { font-size: 8px; }
+@media(max-width:420px) { .lm .lm-menu-categories { gap: 13px; } .lm .lm-menu-categories button { font-size: 11px; } }
+@media(max-width:1000px) { .lm-menu-layout { gap: 30px; grid-template-columns: 1.4fr .8fr; } .lm-dishes { grid-template-columns: 1fr; } .lm-feature-photo { height: 240px; } .lm-menu-feature { position: sticky; top: 25px; } }
+@media(max-width:700px) { .lm-menu-section { padding-block: 65px 40px; } .lm-menu-heading { display: block; } .lm-menu-heading>p { margin-top: 20px; } .lm-menu-categories { gap: 20px; overflow-x: auto; margin-top: 20px; scrollbar-width: thin; } .lm-menu-categories button { font-size: 12px; } .lm-menu-categories sup { margin-left: 4px; } .lm-menu-layout { grid-template-columns: 1fr; gap: 35px; margin-top: 26px; } .lm-category-intro p { font-size: 11px; } .lm-dish { padding-block: 18px; } .lm-dish-name h4 { font-size: 21px; } .lm-dish>p { font-size: 11px; } .lm-dish-price { font-size: 13px; } .lm-menu-feature { position: static; display: grid; grid-template-columns: .9fr 1fr; } .lm-feature-photo { height: 100%; min-height: 330px; } .lm-feature-label { font-size: 6px; bottom: 14px; left: 10px; right: 10px; text-align: center; padding: 7px 3px; } .lm-feature-copy { padding: 20px 17px 22px; } .lm-feature-copy h3 { font-size: 37px; } .lm-feature-copy>.lm-handwritten { font-size: 23px; line-height: 1; } .lm-feature-copy>p { font-size: 10px; } .lm-feature-copy .lm-text-link { align-items: start; line-height: 1.5; gap: 8px; } .lm-dinner-note { display: block; margin-top: 35px; } .lm-dinner-note .lm-button { margin-top: 23px; width: 100%; gap: 15px; font-size: 11px; } }

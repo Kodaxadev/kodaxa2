@@ -29,11 +29,22 @@ The production site is a static export. Contact links open the visitor's email a
 - `app/globals.css`: shared tokens and motion preferences.
 - `lib/projects.ts`: fictional concept showcase content.
 - `components/ui/`: generated UI primitives; the site uses dialog and accordion.
-- `public/images/`: local, optimized artwork and licensed photography.
+- `public/images/`: local, optimized artwork and photography; provenance is documented per project.
 - `docs/decisions.md`: design and implementation rationale with primary sources.
 - `docs/assets.md`: asset provenance and reuse information.
 
 Both Daybreak Coffee and Forma Living are clearly labeled independent concepts, not client engagements. The site makes no invented client, performance, award, or team-size claims.
+
+## Las Mañanitas concept
+
+The featured restaurant experience lives at `/concepts/las-mananitas`. It presents the family’s Hazelwood beginnings and sole current Clovis location, a 39-item menu, actual restaurant photography, and links to the current Clovis ordering/directions services.
+
+- `components/restaurant/`: restaurant sections and interactions.
+- `lib/restaurant/`: sourced menu data and contact links.
+- `app/concepts/las-mananitas/`: route, metadata, scoped design and typography.
+- `docs/las-mananitas-research.md`: owner-story research, menu audit, source conflicts, image provenance and design decisions.
+
+The restaurant concept is labeled independent and marked noindex. It is not the restaurant’s official site. Restaurant photographs are reference assets for this private concept, not represented as royalty-free stock. Published prices and hours are dated or qualified, with current ordering delegated to the actual restaurant storefront.
 
 ## Hosting
 

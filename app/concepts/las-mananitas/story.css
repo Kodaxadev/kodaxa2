@@ -1,0 +1,18 @@
+.lm-story { padding-top: 115px; padding-bottom: 70px; }
+.lm-story-heading .lm-eyebrow { margin-bottom: 22px; }
+.lm-story-layout { display: grid; grid-template-columns: 1.12fr 1fr; gap: clamp(50px,9vw,150px); margin-top: 55px; }
+.lm-story-photo { margin: 0; transform: rotate(-2deg); align-self: start; padding: 13px 13px 0; background: #fff9eb; box-shadow: 0 4px 15px #52282410; border: 1px solid #762e2b15; }
+.lm-story-photo img { display: block; width: 100%; height: 370px; object-fit: cover; }
+.lm-story-photo figcaption { font-size: 29px; text-align: center; padding: 16px 0 20px; }
+.lm-story-copy { max-width: 430px; padding-top: 4px; color: var(--lm-ink); }
+.lm-story-heart { color: #ab5144; margin-bottom: 23px; }
+.lm-story-copy .lm-story-lead { font-family: var(--font-lm-serif),serif; font-size: 27px; line-height: 1.3; letter-spacing: -.035em; color: var(--lm-red); }
+.lm-story-copy p { font-size: 12px; line-height: 1.95; margin-bottom: 19px; }
+.lm-story-copy .lm-text-link { margin-top: 0; color: var(--lm-red); }
+.lm-story-quote { position: relative; text-align: center; margin-top: 80px; padding-top: 25px; }
+.lm-quote-mark { font-family: var(--font-lm-serif),serif; font-size: 80px; line-height: .7; display: block; color: #b67a46; }
+.lm-story-quote blockquote { font-family: var(--font-lm-serif),serif; font-size: clamp(27px,3.2vw,48px); letter-spacing: -.035em; line-height: 1.25; margin: 0 0 24px; }
+.lm-story-quote .lm-eyebrow { font-size: 8px; letter-spacing: .13em; }
+.lm-story-quote .lm-eyebrow span { margin-inline: 8px; }
+@media(max-width:900px) { .lm-story-layout { gap: 40px; } .lm-story-photo img { height: 320px; } .lm-story-photo figcaption { font-size: 23px; } }
+@media(max-width:700px) { .lm-story { padding-top: 75px; padding-bottom: 60px; } .lm-story-layout { grid-template-columns: 1fr; gap: 42px; margin-top: 34px; } .lm-story-photo { margin-inline: 3px; } .lm-story-photo img { height: 270px; } .lm-story-copy { max-width: none; } .lm-story-copy p { font-size: 13px; } .lm-story-copy .lm-story-lead { font-size: 29px; } .lm-story-quote { margin-top: 42px; } .lm-story-quote .lm-eyebrow { max-width: 250px; margin-inline: auto; line-height: 1.9; } }

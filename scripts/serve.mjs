@@ -33,7 +33,12 @@ createServer(async (request, response) => {
       response.writeHead(403).end();
       return;
     }
-    if ((await stat(file)).isDirectory()) file = resolve(file, 'index.html');
+    try {
+      if ((await stat(file)).isDirectory()) file = resolve(file, 'index.html');
+    } catch {
+      if (extname(file)) throw new Error('Asset not found');
+      file += '.html';
+    }
     const body = await readFile(file);
     response.writeHead(200, {
       'Content-Type': mime[extname(file)] || 'application/octet-stream',

@@ -1,0 +1,13 @@
+.restaurant-project { position: relative; display: grid; grid-template-columns: 1fr 1fr; background: #762e2b; color: #fbf3df; margin: 0 0 35px; min-height: 520px; overflow: hidden; }
+.restaurant-project-copy { padding: 46px 20px 65px 46px; position: relative; z-index: 2; }
+.restaurant-project-copy>.mono { font-size: 9px; letter-spacing: .1em; color: #ebcfae; }
+.restaurant-project-copy h3 { font-family: Georgia,serif; font-size: 27px; font-weight: 400; letter-spacing: -.055em; margin-top: 45px; }
+.restaurant-project-title { font-family: Georgia,serif; font-size: clamp(48px,5.1vw,82px); letter-spacing: -.055em; line-height: .98; margin: 18px 0 24px; }
+.restaurant-project-copy>p:not(.mono):not(.restaurant-project-title) { font-size: 11px; line-height: 1.8; color: #f2ddc5; }
+.restaurant-project-link { display: inline-flex; gap: 40px; align-items: center; border-bottom: 1px solid #fbf3df85; padding: 13px 0; font-size: 11px; margin-top: 20px; transition: gap .2s; }
+.restaurant-project:hover .restaurant-project-link { gap: 52px; }
+.restaurant-project-photo { padding: 35px 40px 35px 0; }
+.restaurant-project-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 46% 46% 1px 1px; transition: transform .65s; }
+.restaurant-project:hover .restaurant-project-photo img { transform: scale(1.025); }
+.restaurant-project-tag { position: absolute; bottom: 20px; left: 46px; font-size: 8px; color: #e3c0a3; }
+@media(max-width:700px) { .restaurant-project { grid-template-columns: 1fr; } .restaurant-project-copy { padding: 28px 26px 20px; } .restaurant-project-copy h3 { margin-top: 30px; } .restaurant-project-title { font-size: 58px; } .restaurant-project-photo { padding: 15px 26px 50px; } .restaurant-project-photo img { height: 360px; } .restaurant-project-tag { left: 26px; font-size: 8px; } }
