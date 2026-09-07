@@ -9,6 +9,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "node scripts/serve.mjs",
+    "indexnow": "node scripts/indexnow.mjs",
     "lint": "oxlint",
     "format": "oxfmt",
     "check": "tsc --noEmit"
