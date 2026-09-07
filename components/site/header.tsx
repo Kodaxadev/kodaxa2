@@ -25,18 +25,18 @@ export function Header() {
   }, [menu]);
   return (
     <header className="site-header shell" id="top">
-      <a className="wordmark" href="#top" aria-label="Kodaxa home">
+      <a className="wordmark" href="/" aria-label="Kodaxa home">
         kodaxa
         <span className="logo-star" aria-hidden="true">
           ✳
         </span>
       </a>
       <nav className="desktop-nav" aria-label="Main navigation">
-        <a href="#work">
-          The work <span>04</span>
+        <a href="/#work">
+          Work <span>01</span>
         </a>
-        <a href="#services">What we do</a>
-        <a href="#about">The studio</a>
+        <a href="/services/web-design">Web design</a>
+        <a href="/about">The studio</a>
       </nav>
       <div className="header-actions">
         <button
@@ -67,9 +67,9 @@ export function Header() {
           aria-label="Mobile navigation"
         >
           {[
-            ['The work', '#work'],
-            ['What we do', '#services'],
-            ['The studio', '#about'],
+            ['Work', '/#work'],
+            ['Web design', '/services/web-design'],
+            ['The studio', '/about'],
             ['Let’s talk', '#contact'],
           ].map(([label, href]) => (
             <a key={href} href={href} onClick={() => setMenu(false)}>

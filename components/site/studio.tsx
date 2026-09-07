@@ -46,6 +46,11 @@ export function Studio() {
             digital presence just as distinctive.
           </p>
           <p>
+            Kodaxa is an independent web design and development studio in
+            Clovis, California, focused on practical websites for small
+            businesses.
+          </p>
+          <p>
             That’s why Kodaxa brings design and implementation together. A
             direct relationship, thoughtful work, and the kind of care you’d
             expect from a neighbor.

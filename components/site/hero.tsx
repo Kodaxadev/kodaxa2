@@ -25,6 +25,10 @@ export function Hero() {
                 We turn what makes your business different into something people
                 can’t ignore.
               </p>
+              <p className="section-label mono" style={{ marginTop: 12 }}>
+                Kodaxa builds websites for small businesses in Clovis and the
+                Central Valley.
+              </p>
               <a href="#work" className="pill">
                 See what’s possible <ArrowUpRight />
               </a>

@@ -50,15 +50,15 @@ export function Services() {
           Serious capability.
         </h2>
         <p>
-          You bring the ambition.
-          <br />
-          We bring the creative thinking and the technical know-how to make it
-          happen.
-        </p>
-        <a className="arrow-link" href="#contact">
-          Find your next step <ArrowUpRight size={18} />
-        </a>
-      </div>
+            You bring the ambition.
+            <br />
+            We bring the creative thinking and the technical know-how to make it
+            happen.
+          </p>
+          <a className="arrow-link" href="/services/web-design">
+            Find your next step <ArrowUpRight size={18} />
+          </a>
+        </div>
       <Accordion
         className="service-accordion"
         defaultValue={['service-1']}

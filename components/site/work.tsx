@@ -146,7 +146,12 @@ export function Work() {
         ))}
       </div>
       <div className="work-note">
-        <p>Independent concepts. A very real attention to detail.</p>
+        <div>
+          <p>Independent concepts. A very real attention to detail.</p>
+          <a className="arrow-link" href="/work">
+            Explore indexable concept case pages
+          </a>
+        </div>
         <ArrowDownRight size={24} strokeWidth={1.2} />
       </div>
     </section>
