@@ -1,0 +1,290 @@
+.not-found-page {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 72% 45%, rgba(194, 250, 105, .2), transparent 27rem),
+    var(--background);
+  padding: 28px var(--gutter) 24px;
+}
+
+.not-found-header,
+.not-found-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.not-found-header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.not-found-wordmark {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 3px;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -.06em;
+}
+
+.not-found-wordmark span {
+  color: #627e35;
+  font-size: .8rem;
+  line-height: 1;
+  animation: nf-star-wink 2.8s ease-in-out infinite;
+}
+
+.not-found-status { color: #656b60; }
+
+.not-found-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .82fr);
+  align-items: center;
+  gap: clamp(48px, 7vw, 120px);
+  padding-block: clamp(64px, 8vw, 120px);
+}
+
+.not-found-copy {
+  display: grid;
+  gap: 24px;
+  max-width: 800px;
+}
+
+.not-found-copy h1 {
+  max-width: 760px;
+  font-size: clamp(3.3rem, 7.4vw, 8.4rem);
+  line-height: .88;
+  letter-spacing: -.072em;
+  text-wrap: balance;
+}
+
+.not-found-copy h1 em {
+  color: #627e35;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.not-found-intro {
+  max-width: 590px;
+  color: #545b51;
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  line-height: 1.7;
+}
+
+.not-found-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 6px;
+}
+
+.not-found-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding-block: 12px;
+  border-bottom: 1px solid var(--foreground);
+  font-size: .88rem;
+  font-weight: 650;
+  transition: gap .2s ease, color .2s ease;
+}
+
+.not-found-link:hover {
+  gap: 14px;
+  color: #4f6d22;
+}
+
+.not-found-art {
+  position: relative;
+  width: min(42vw, 540px);
+  aspect-ratio: 1;
+  justify-self: end;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+
+.not-found-art::before {
+  content: '';
+  position: absolute;
+  inset: 18%;
+  border-radius: 50%;
+  background: var(--green);
+  filter: blur(42px);
+  opacity: .33;
+  z-index: -2;
+  animation: nf-breathe 4.8s ease-in-out infinite;
+}
+
+.not-found-orbit {
+  position: absolute;
+  inset: 8%;
+  border: 1px dashed #989e90;
+  border-radius: 50%;
+}
+
+.orbit-one {
+  transform: rotate(-17deg) scaleY(.62);
+  animation: nf-orbit-drift 11s linear infinite;
+}
+
+.orbit-two {
+  inset: 21%;
+  border-style: solid;
+  border-color: rgba(24, 27, 23, .18);
+  transform: rotate(31deg) scaleY(.72);
+  animation: nf-orbit-drift-reverse 14s linear infinite;
+}
+
+.not-found-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(4px, 1vw, 14px);
+  font-size: clamp(5.3rem, 10vw, 9.2rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.09em;
+}
+
+.not-found-number .zero {
+  display: inline-grid;
+  place-items: center;
+  width: .72em;
+  height: .94em;
+  border: .08em solid currentColor;
+  border-radius: 50%;
+  color: transparent;
+}
+
+.lost-star-track {
+  position: absolute;
+  inset: 0;
+  animation: nf-track-spin 7.2s linear infinite;
+}
+
+.lost-star {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 64px;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--foreground);
+  color: var(--green);
+  font-size: 1.55rem;
+  box-shadow: 0 13px 30px rgba(24, 27, 23, .17);
+  animation: nf-star-counterspin 7.2s linear infinite, nf-star-hop 1.8s ease-in-out infinite;
+}
+
+.orbit-note {
+  position: absolute;
+  padding: 7px 10px;
+  background: var(--background);
+  border: 1px solid var(--line);
+  color: #666c61;
+  white-space: nowrap;
+}
+
+.orbit-note-a {
+  top: 21%;
+  right: -1%;
+  transform: rotate(8deg);
+  animation: nf-note-a 4.4s ease-in-out infinite;
+}
+
+.orbit-note-b {
+  bottom: 14%;
+  left: 1%;
+  transform: rotate(-7deg);
+  animation: nf-note-b 5.1s ease-in-out infinite;
+}
+
+.not-found-footer {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: #656b60;
+}
+
+@keyframes nf-track-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  36% { transform: rotate(126deg) scale(.93); }
+  62% { transform: rotate(218deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes nf-star-counterspin {
+  from { rotate: 0deg; }
+  to { rotate: -360deg; }
+}
+
+@keyframes nf-star-hop {
+  0%, 100% { margin-top: 0; }
+  50% { margin-top: -9px; }
+}
+
+@keyframes nf-star-wink {
+  0%, 88%, 100% { transform: rotate(0deg) scale(1); }
+  92% { transform: rotate(24deg) scale(1.22); }
+  96% { transform: rotate(-12deg) scale(.92); }
+}
+
+@keyframes nf-breathe {
+  0%, 100% { transform: scale(.92); opacity: .23; }
+  50% { transform: scale(1.08); opacity: .4; }
+}
+
+@keyframes nf-orbit-drift {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
+
+@keyframes nf-orbit-drift-reverse {
+  from { rotate: 360deg; }
+  to { rotate: 0deg; }
+}
+
+@keyframes nf-note-a {
+  0%, 100% { translate: 0 0; }
+  50% { translate: -7px 8px; }
+}
+
+@keyframes nf-note-b {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 9px -6px; }
+}
+
+@media (max-width: 900px) {
+  .not-found-page { overflow: visible; }
+  .not-found-content {
+    grid-template-columns: 1fr;
+    padding-block: 54px 42px;
+  }
+  .not-found-art {
+    width: min(88vw, 470px);
+    justify-self: center;
+    order: -1;
+  }
+  .not-found-copy { text-align: left; }
+  .not-found-footer span:nth-child(2) { display: none; }
+}
+
+@media (max-width: 560px) {
+  .not-found-page { padding: 20px 20px 18px; }
+  .not-found-header { align-items: flex-start; }
+  .not-found-status { max-width: 150px; text-align: right; }
+  .not-found-content { gap: 30px; padding-top: 40px; }
+  .not-found-art { width: min(90vw, 360px); }
+  .lost-star { width: 52px; font-size: 1.25rem; }
+  .orbit-note { font-size: .62rem; }
+  .not-found-actions { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .not-found-footer { font-size: .64rem; }
+}
