@@ -12,10 +12,10 @@ export function SassanosProject() {
     >
       <Image
         unoptimized
-        src="/images/sassanos/campaign.webp"
+        src="/images/sassanos/campaign-home.webp"
         alt="Original western boot campaign imagery for the Sassano’s concept"
-        width={1536}
-        height={1024}
+        width={900}
+        height={600}
         loading="lazy"
       />
       <div className="sassanos-project-shade" />

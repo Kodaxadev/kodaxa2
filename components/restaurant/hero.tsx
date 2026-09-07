@@ -47,10 +47,10 @@ export function RestaurantHero() {
           <div className="lm-photo-arch">
             <Image
               unoptimized
-              src="/images/las-mananitas/chilaquiles.webp"
+              src="/images/las-mananitas/chilaquiles-home.webp"
               alt="Las Mañanitas chilaquiles with salsa, crema, Cotija, eggs and beans"
-              width={1242}
-              height={746}
+              width={900}
+              height={540}
               priority
             />
           </div>

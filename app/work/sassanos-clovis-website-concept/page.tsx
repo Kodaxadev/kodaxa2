@@ -84,10 +84,10 @@ export default function SassanosWorkPage() {
           </figure>
           <figure>
             <Image
-              src="/images/sassanos/campaign.webp"
+              src="/images/sassanos/campaign-home.webp"
               alt="Sassano&apos;s concept campaign section"
-              width="1600"
-              height="1000"
+              width="900"
+              height="600"
               unoptimized
             />
             <figcaption>Campaign and offer-driven layout decisions.</figcaption>
@@ -100,4 +100,3 @@ export default function SassanosWorkPage() {
     </main>
   );
 }
-

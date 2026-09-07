@@ -40,11 +40,13 @@ export function Hero() {
               <Image
                 unoptimized
                 className="hero-sculpture"
-                src="/images/kodaxa-knot.webp"
+                src="/images/kodaxa-knot-hero.webp"
                 alt=""
-                width="1254"
-                height="1254"
+                width={860}
+                height={860}
+                loading="eager"
                 fetchPriority="high"
+                priority
               />
             </div>
             <span className="art-coordinate mono">

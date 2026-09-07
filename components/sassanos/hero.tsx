@@ -6,10 +6,10 @@ export function SassanosHero() {
     <section className="ss-hero" id="ss-top" aria-labelledby="ss-title">
       <Image
         className="ss-hero-image"
-        src="/images/sassanos/campaign.webp"
+        src="/images/sassanos/campaign-home.webp"
         alt="Cognac western boots and dark denim in warm light; original concept campaign imagery"
-        width={1536}
-        height={1024}
+        width={900}
+        height={600}
         unoptimized
         priority
       />

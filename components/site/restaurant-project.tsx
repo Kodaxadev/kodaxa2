@@ -29,10 +29,10 @@ export function RestaurantProject() {
       <div className="restaurant-project-photo">
         <Image
           unoptimized
-          src="/images/las-mananitas/chilaquiles.webp"
+          src="/images/las-mananitas/chilaquiles-home.webp"
           alt="The restaurant’s signature chilaquiles breakfast"
-          width={1242}
-          height={745}
+          width={900}
+          height={540}
           loading="lazy"
         />
       </div>

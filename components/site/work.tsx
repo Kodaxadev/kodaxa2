@@ -50,10 +50,10 @@ export function Work() {
                 <div className="project-image">
                   <Image
                     unoptimized
-                    src={project.image}
+                    src={project.thumbnailImage || project.image}
                     alt={project.alt}
-                    width="1400"
-                    height="1000"
+                    width={project.thumbnailWidth || 1400}
+                    height={project.thumbnailHeight || 1000}
                     loading="lazy"
                   />
                   <div className="project-scrim" />
@@ -96,11 +96,11 @@ export function Work() {
                 </div>
               </DialogTrigger>
             </div>
-            <DialogContent className="project-dialog">
-              <Image
-                unoptimized
-                className="dialog-image"
-                src={project.image}
+              <DialogContent className="project-dialog">
+                <Image
+                  unoptimized
+                  className="dialog-image"
+                  src={project.image}
                 alt={project.alt}
                 width="1400"
                 height="1000"
