@@ -13,12 +13,12 @@ const timeoutMs = Number(process.env.INDEXNOW_TIMEOUT_MS) || 15_000;
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
+const queryMode = args.includes('--query') || args.includes('--get');
 const explicitUrls = args.filter(
   (arg) =>
     !arg.startsWith('--') &&
     /^https?:\/\//i.test(arg),
 );
-const urlArgs = args.filter((arg) => arg === '--urls');
 
 if (args.includes('--help') || args.includes('-h')) {
   console.log(`
@@ -31,6 +31,9 @@ Usage:
 
   npm run indexnow -- --dry-run
     Build payload and print request body without sending
+
+  npm run indexnow -- --query
+    Submit using IndexNow query-parameter URLs (GET-style), one URL at a time
 `);
   process.exit(0);
 }
@@ -106,22 +109,76 @@ async function submit(urls) {
   };
 
   if (dryRun) {
-    console.log(
-      JSON.stringify(
-        {
-          endpoint: apiEndpoint,
-          payload,
-        },
-        null,
-        2,
-      ),
-    );
+    if (queryMode) {
+      const queryPayload = {
+        mode: 'query',
+        endpoint: apiEndpoint,
+        urls: urls.map((u) => {
+          const params = new URLSearchParams({
+            key,
+            keyLocation: payload.keyLocation,
+            url: u,
+          });
+          return `${apiEndpoint}?${params.toString()}`;
+        }),
+      };
+      console.log(JSON.stringify(queryPayload, null, 2));
+    } else {
+      console.log(
+        JSON.stringify(
+          {
+            endpoint: apiEndpoint,
+            payload,
+          },
+          null,
+          2,
+        ),
+      );
+    }
     return;
   }
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
+    if (queryMode) {
+      const results = await Promise.all(
+        urls.map((url) => {
+          const params = new URLSearchParams({
+            url,
+            key,
+            keyLocation: payload.keyLocation,
+          });
+          return fetch(`${apiEndpoint}?${params.toString()}`, {
+            method: 'GET',
+            signal: controller.signal,
+          });
+        }),
+      );
+      const responses = await Promise.all(
+        results.map(async (response) => {
+          const text = await response.text();
+          return {
+            status: response.status,
+            statusText: response.statusText,
+            body: text,
+          };
+        }),
+      );
+      const failures = responses.filter((r) => r.status < 200 || r.status >= 300);
+      if (failures.length > 0) {
+        throw new Error(
+          `IndexNow request failed for ${failures.length} URL(s): ${JSON.stringify(
+            failures,
+            null,
+            2,
+          )}`,
+        );
+      }
+      console.log(`IndexNow submitted ${urls.length} URL(s) successfully via query mode.`);
+      return;
+    }
+
     const response = await fetch(apiEndpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
