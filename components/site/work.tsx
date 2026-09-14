@@ -12,6 +12,7 @@ import { projects } from '@/lib/projects';
 import Image from 'next/image';
 import { RestaurantProject } from './restaurant-project';
 import { SassanosProject } from './sassanos-project';
+import { JobWardenProject } from './jobwarden-project';
 
 export function Work() {
   return (
@@ -26,17 +27,18 @@ export function Work() {
             01 / A glimpse of what’s possible
           </p>
           <h2 id="work-heading">
-            Different businesses.
+            Different challenges.
             <br />
             <span>Same obsession.</span>
           </h2>
         </div>
         <p className="section-intro">
-          Every business has a story.
+          From a business website to a product you can install.
           <br />
-          We make yours worth a closer look.
+          Built around the people using it.
         </p>
       </div>
+      <JobWardenProject />
       <SassanosProject />
       <RestaurantProject />
       <div className="project-grid">
@@ -147,9 +149,9 @@ export function Work() {
       </div>
       <div className="work-note">
         <div>
-          <p>Independent concepts. A very real attention to detail.</p>
+          <p>Original products. Independent concepts. Built with care.</p>
           <a className="arrow-link" href="/work">
-            Explore indexable concept case pages
+            Explore the projects
           </a>
         </div>
         <ArrowDownRight size={24} strokeWidth={1.2} />
