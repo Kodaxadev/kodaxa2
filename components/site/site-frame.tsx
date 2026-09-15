@@ -4,6 +4,7 @@ import { Contact } from './contact';
 import { Motion } from './motion';
 import './editorial.css';
 import './project-details.css';
+import './showcase-polish.css';
 
 /** Shared studio chrome. Concept sites keep their own navigation and identity. */
 export function SiteFrame({ children, mainClassName = '' }: { children: ReactNode; mainClassName?: string }) {
