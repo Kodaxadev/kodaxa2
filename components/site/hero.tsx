@@ -1,91 +1,31 @@
-import { ArrowDown, ArrowUpRight, Asterisk } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import { BrandMark } from './brand-mark';
 
 export function Hero() {
   return (
     <>
       <section className="hero shell" aria-labelledby="hero-heading">
         <div className="hero-topline mono">
-          <span>
-            <i className="status-dot" /> Independent minds. Shared ambition.
-          </span>
-          <span>Design + technology, with a human touch</span>
+          <span>Web design + development</span>
+          <span>Independent studio · Clovis, California</span>
         </div>
         <div className="hero-body">
           <div className="hero-copy">
-            <h1 id="hero-heading">
-              <span>Small business.</span>
-              <br />
-              <span>
-                Big <em>presence.</em>
-              </span>
-            </h1>
+            <h1 id="hero-heading"><span>Small business.</span><br /><span>Big <em>presence.</em></span></h1>
             <div className="hero-description">
-              <p>
-                We turn what makes your business different into something people
-                can’t ignore.
-              </p>
-              <p className="section-label mono" style={{ marginTop: 12 }}>
-                Kodaxa builds websites for small businesses in Clovis and the
-                Central Valley.
-              </p>
-              <a href="#work" className="pill">
-                See what’s possible <ArrowUpRight />
-              </a>
+              <p>What makes your business different deserves to be seen. Distinctive websites, thoughtful design, and the technical care to make it all work.</p>
+              <div className="hero-actions"><a href="#work" className="pill">Explore selected work <ArrowUpRight aria-hidden="true" /></a><a href="#contact" className="quiet-link">Let’s talk <ArrowUpRight size={16} aria-hidden="true" /></a></div>
             </div>
           </div>
           <div className="hero-art" aria-hidden="true">
-            <div className="art-orbit" />
-            <div className="art-parallax">
-              <Image
-                unoptimized
-                className="hero-sculpture"
-                src="/images/kodaxa-knot-hero.webp"
-                alt=""
-                width={860}
-                height={860}
-                loading="eager"
-                fetchPriority="high"
-                priority
-              />
-            </div>
-            <span className="art-coordinate mono">
-              K / 001 — THE CONNECTION
-            </span>
-            <div className="art-badge">
-              <Asterisk size={30} />
-              <span>
-                BIG IDEAS.
-                <br />
-                LOCAL ROOTS.
-              </span>
-            </div>
+            <div className="art-parallax"><Image unoptimized className="hero-sculpture" src="/images/kodaxa-knot-hero.webp" alt="" width={860} height={860} loading="eager" fetchPriority="high" priority /></div>
+            <span className="art-caption mono">The connection / A Kodaxa study</span>
           </div>
         </div>
-        <div className="hero-bottom mono">
-          <a href="#work">
-            <ArrowDown size={15} /> A little further. A lot to discover.
-          </a>
-          <span className="location-label">
-            Clovis, California <span className="location-dot">↗</span> Built for
-            everywhere.
-          </span>
-          <span className="hero-index">01 / 04</span>
-        </div>
+        <div className="hero-bottom mono"><a href="#work"><ArrowDown size={16} aria-hidden="true" />Selected work, below</a><span className="location-label">Clovis roots. An outlook beyond.</span><span className="hero-signature">Design with intention.</span></div>
       </section>
-      <div
-        className="ticker"
-        aria-label="Strategy, design, development, and a little extra"
-      >
-        <div className="ticker-track">
-          {[0, 1, 2, 3].map((i) => (
-            <span key={i} aria-hidden={i > 0 ? true : undefined}>
-              Strategy <Asterisk /> Design <Asterisk /> Development <Asterisk />{' '}
-              A little extra <Asterisk />
-            </span>
-          ))}
-        </div>
-      </div>
+      <div className="ticker" aria-label="Strategy, design, development, and care"><div className="ticker-track"><span>Strategy <BrandMark /></span><span>Design <BrandMark /></span><span>Development <BrandMark /></span><span>Care <BrandMark /></span></div></div>
     </>
   );
 }

@@ -28,22 +28,6 @@ export function JobWardenPreview() {
     </figure>
   );
 }
-
 export function JobWardenProject() {
-  return (
-    <article className={styles.project} aria-labelledby="jobwarden-project-title" data-reveal>
-      <JobWardenPreview />
-      <div className={styles.copy}>
-        <p className={styles.eyebrow}>INDEPENDENT PRODUCT / KODAXA</p>
-        <div className={styles.badges}><span>Website</span><span>PWA</span><span className={styles.trial}><i />In trial</span></div>
-        <h3 id="jobwarden-project-title">JobWarden</h3>
-        <p className={styles.tagline}>Your side of<br />the working day.</p>
-        <p className={styles.description}>The lunch you didn’t finish. The work after clock-out. A private place for California hourly workers to keep the details, in their own words.</p>
-        <p className={styles.disciplines}>Product identity · Website · Installable app</p>
-        <Link className={styles.caseLink} href="/work/jobwarden">Explore the project <ArrowUpRight size={19} aria-hidden="true" /></Link>
-        <div className={styles.liveLinks}><a href="https://jobwarden.kodaxa.dev/" target="_blank" rel="noopener noreferrer">Visit website <ArrowUpRight size={15} aria-hidden="true" /></a><a href="https://jobwarden.kodaxa.dev/install.html" target="_blank" rel="noopener noreferrer">Install the PWA <ArrowUpRight size={15} aria-hidden="true" /></a></div>
-        <p className={styles.disclosure}>In trial. California employment-attorney review pending. Not legal advice.</p>
-      </div>
-    </article>
-  );
+  return <article className={styles.project} aria-labelledby="jobwarden-project-title" data-reveal><JobWardenPreview /><div className={styles.copy}><p className={styles.eyebrow}>INDEPENDENT PRODUCT / KODAXA</p><div className={styles.badges}><span>Website</span><span>PWA</span><span className={styles.trial}><i />In trial</span></div><h3 id="jobwarden-project-title">JobWarden</h3><p className={styles.tagline}>Your side of<br />the working day.</p><p className={styles.description}>The lunch you didn’t finish. The work after clock-out. A private place for California hourly workers to keep the details, in their own words.</p><p className={styles.disciplines}>Product identity · Website · Installable app</p><Link className={styles.caseLink} href="/work/jobwarden">Explore the project<ArrowUpRight size={19} aria-hidden="true" /></Link><p className={styles.disclosure}>In trial. California employment-attorney review pending. Not legal advice.</p></div></article>;
 }

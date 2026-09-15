@@ -1,0 +1,35 @@
+/* Preserve each project's art direction while making the studio framing readable. */
+.studio-site .restaurant-project { min-height: 550px; }
+.studio-site .restaurant-project-copy { padding-bottom: 82px; }
+.studio-site .restaurant-project-copy>.mono { font-size: .6875rem; line-height: 1.7; }
+.studio-site .restaurant-project-copy>p:not(.mono):not(.restaurant-project-title) { font-size: 1rem; line-height: 1.8; max-width: 390px; }
+.studio-site .restaurant-project-link { font-size: .875rem; min-height: 48px; gap: 24px; }
+.studio-site .restaurant-project:hover .restaurant-project-link { gap: 24px; }
+.studio-site .restaurant-project-link svg, .studio-site .sassanos-project-link svg { transition: transform 220ms var(--ease-out); flex-shrink: 0; }
+.studio-site .restaurant-project:hover .restaurant-project-link svg, .studio-site .sassanos-project:hover .sassanos-project-link svg { transform: translate(2px,-2px); }
+.studio-site .restaurant-project-tag { font-size: .6875rem; bottom: 24px; right: 26px; }
+.studio-site .sassanos-project-link { min-height: 48px; align-items: center; font-size: .875rem; gap: 24px; }
+.studio-site .sassanos-project-copy>.mono { font-size: .6875rem; line-height: 1.7; }
+.studio-site .sassanos-project-tag { font-size: .6875rem; }
+.studio-site .sassanos-project-origin { font-size: .6875rem; }
+.studio-site .sassanos-project>img { transition: transform 650ms var(--ease-out); }
+.studio-site .sassanos-project:hover>img { transform: scale(1.02); }
+.studio-site .project-number { display: none; }
+@media (max-width: 1000px) and (min-width: 761px) {
+  .studio-site .project-caption { flex-wrap: wrap; }
+  .studio-site .project-caption>span { display: block; width: 100%; }
+  .studio-site .project-caption>svg { display: none; }
+}
+@media (max-width: 700px) {
+  .studio-site .restaurant-project-copy { padding: 30px 26px 18px; }
+  .studio-site .restaurant-project-photo { padding-bottom: 62px; }
+  .studio-site .restaurant-project-title { font-size: clamp(2.8rem, 12vw, 4.5rem); }
+  .studio-site .restaurant-project-link { gap: 20px; font-size: .875rem; }
+  .studio-site .restaurant-project:hover .restaurant-project-link { gap: 20px; }
+  .studio-site .restaurant-project-photo img { height: clamp(260px, 80vw, 390px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio-site .restaurant-project:hover .restaurant-project-link svg,
+  .studio-site .sassanos-project:hover .sassanos-project-link svg,
+  .studio-site .sassanos-project:hover>img { transform: none; }
+}
