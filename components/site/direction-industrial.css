@@ -1,0 +1,98 @@
+/* Direction A — California Industrial. Survey lines, fabrication marks, hard edges, mineral surfaces. */
+.studio-site.direction-industrial {
+  --background: #e3e5e1;
+  --foreground: #151713;
+  --green: #d8562f;
+  --line: #9da39a;
+  --muted: #50574f;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.direction-industrial :where(h1,h2,h3,.wordmark,.project-name) { font-family: Arial, Helvetica, sans-serif; }
+.direction-industrial .mono,
+.direction-industrial .section-label { font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.direction-industrial .site-header { height: 82px; border-top: 5px solid var(--foreground); border-bottom: 1px solid var(--foreground); }
+.direction-industrial .wordmark { text-transform: uppercase; font-size: 34px; font-weight: 900; letter-spacing: -.075em; }
+.direction-industrial .wordmark .logo-star { color: var(--green); }
+.direction-industrial .desktop-nav { font-weight: 700; text-transform: uppercase; font-size: .72rem; letter-spacing: .09em; }
+.direction-industrial .motion-toggle,
+.direction-industrial .menu-toggle,
+.direction-industrial .header-contact,
+.direction-industrial .pill,
+.direction-industrial .copy-email { border-radius: 0; }
+.direction-industrial .motion-toggle,
+.direction-industrial .menu-toggle { border: 1px solid var(--foreground); }
+.direction-industrial .header-contact { background: var(--foreground); color: var(--background); border-color: var(--foreground); text-transform: uppercase; font-size: .72rem; letter-spacing: .08em; }
+.direction-industrial .hero { background-image: linear-gradient(to right, #15171310 1px, transparent 1px), linear-gradient(to bottom, #1517130c 1px, transparent 1px); background-size: 72px 72px; }
+.direction-industrial .hero-topline { border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+.direction-industrial .hero-body { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr); gap: clamp(30px, 6vw, 88px); align-items: center; padding-block: 58px; min-height: 650px; }
+.direction-industrial .hero-copy { width: auto; }
+.direction-industrial .hero h1 { font-family: Arial, Helvetica, sans-serif; font-size: clamp(4rem, 7.4vw, 8.3rem); font-weight: 900; text-transform: uppercase; line-height: .88; letter-spacing: -.075em; max-width: 900px; }
+.direction-industrial .hero h1 em::after { display: none; }
+.direction-industrial .hero-description { max-width: 470px; margin-top: 34px; }
+.direction-industrial .hero-description p { color: var(--foreground); font-size: 1.05rem; border-left: 5px solid var(--green); padding-left: 18px; }
+.direction-industrial .pill { background: var(--green); color: var(--foreground); border: 1px solid var(--foreground); text-transform: uppercase; font-size: .72rem; letter-spacing: .08em; }
+.direction-industrial .quiet-link { text-transform: uppercase; font-size: .72rem; letter-spacing: .08em; text-decoration: none; border-bottom: 1px solid var(--foreground); }
+.direction-industrial .hero-art { position: relative; inset: auto; width: 100%; aspect-ratio: 4 / 5; border: 1px solid var(--foreground); overflow: hidden; background: #c8cbc5; }
+.direction-industrial .hero-art::before,
+.direction-industrial .hero-art::after { content: ''; position: absolute; z-index: 2; background: var(--green); }
+.direction-industrial .hero-art::before { width: 44px; height: 2px; left: -1px; top: 26px; }
+.direction-industrial .hero-art::after { width: 2px; height: 44px; left: 20px; top: 5px; }
+.direction-industrial .hero-sculpture { animation: none; filter: grayscale(1) contrast(1.18); transform: scale(1.06); }
+.direction-industrial .hero-transition { border-block: 1px solid var(--foreground); padding-block: 24px; }
+.direction-industrial .hero-capabilities-label { color: var(--foreground); }
+.direction-industrial .hero-capabilities-list { text-transform: uppercase; font-size: clamp(1rem, 1.6vw, 1.35rem); letter-spacing: .04em; font-weight: 800; }
+.direction-industrial .hero-capabilities-list li + li::before { width: 22px; height: 1px; border-radius: 0; background: var(--foreground); }
+.direction-industrial .hero-work-icon { border-radius: 0; background: var(--green); border: 1px solid var(--foreground); }
+.direction-industrial .work-section,
+.direction-industrial .services-section,
+.direction-industrial .editorial-page { background: var(--background); }
+.direction-industrial .section-heading { border-top: 7px solid var(--foreground); padding-top: 22px; }
+.direction-industrial .section-heading h2,
+.direction-industrial .services-intro h2,
+.direction-industrial .studio-main h2,
+.direction-industrial .page-intro h1 { font-family: Arial, Helvetica, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -.055em; }
+.direction-industrial .section-heading h2 span { color: var(--green); }
+.direction-industrial .project-image,
+.direction-industrial .collection-image,
+.direction-industrial .case-cover img,
+.direction-industrial .case-gallery img { border: 1px solid var(--foreground); border-radius: 0; }
+.direction-industrial .project-open,
+.direction-industrial .collection-image>span { border-radius: 0; background: var(--green); border: 1px solid var(--foreground); }
+.direction-industrial .project-number { display: none; }
+.direction-industrial .project-caption { border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+.direction-industrial .service-item { border-color: var(--foreground); }
+.direction-industrial .service-trigger { text-transform: uppercase; font-weight: 800; }
+.direction-industrial .service-number { color: var(--green); }
+.direction-industrial .service-tags span { border-radius: 0; border-color: var(--foreground); text-transform: uppercase; letter-spacing: .06em; }
+.direction-industrial .studio-section { background: #1b1d1a; color: #eff0ec; border-top: 8px solid var(--green); }
+.direction-industrial .studio-main h2 span { color: var(--green); }
+.direction-industrial .studio-story p,
+.direction-industrial .process-grid p { color: #cbd0c6; }
+.direction-industrial .process-grid article { border-color: #697068; }
+.direction-industrial .process-grid .mono { color: var(--green); }
+.direction-industrial .studio-bottom { font-family: Arial, Helvetica, sans-serif; text-transform: uppercase; letter-spacing: .12em; }
+.direction-industrial .contact-section { background: var(--green); color: var(--foreground); border-top: 1px solid var(--foreground); }
+.direction-industrial .contact-main h2 { font-family: Arial, Helvetica, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: -.065em; }
+.direction-industrial .contact-main h2 span { color: var(--foreground); }
+.direction-industrial .contact-orb { border-radius: 0; background: var(--foreground); color: var(--background); border-color: var(--foreground); }
+.direction-industrial .contact-orb:hover { background: var(--background); color: var(--foreground); }
+.direction-industrial .footer { border-top: 7px solid var(--foreground); }
+.direction-industrial .footer-wordmark { justify-content: flex-start; text-transform: uppercase; font-weight: 900; letter-spacing: -.09em; }
+.direction-industrial .footer-wordmark svg { color: var(--green); }
+.direction-industrial .editorial-row,
+.direction-industrial .offering,
+.direction-industrial .case-status,
+.direction-industrial .case-navigation { border-color: var(--foreground); }
+.direction-industrial .founder-note { background: #1b1d1a; border-left: 8px solid var(--green); border-radius: 0; }
+@media (max-width: 760px) {
+  .direction-industrial .site-header { height: 76px; }
+  .direction-industrial .wordmark { font-size: 29px; }
+  .direction-industrial .hero-body { grid-template-columns: 1fr; min-height: 0; gap: 30px; padding-block: 36px 24px; }
+  .direction-industrial .hero h1 { font-size: clamp(3rem, 13vw, 5.2rem); }
+  .direction-industrial .hero-art { width: 78%; max-width: 300px; margin: 0 0 0 auto; aspect-ratio: 5 / 4; }
+  .direction-industrial .hero-transition { border-top: 1px solid var(--foreground); }
+  .direction-industrial .section-heading { border-top-width: 5px; }
+  .direction-industrial .contact-main h2 { font-size: clamp(2.5rem, 11vw, 4.2rem); }
+}
