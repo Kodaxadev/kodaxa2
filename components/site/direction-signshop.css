@@ -1,0 +1,93 @@
+/* Direction B — Contemporary Sign Shop. Painted color, bold lettering, irregular but controlled framing. */
+.studio-site.direction-signshop {
+  --background: #dbe9e9;
+  --foreground: #162019;
+  --green: #ef5135;
+  --line: #708985;
+  --muted: #3f5651;
+  --yellow: #f1d45a;
+  --blue: #2746bd;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.direction-signshop .mono,
+.direction-signshop .section-label { font-family: Arial, Helvetica, sans-serif; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.direction-signshop :where(h1,h2,h3) { font-family: Georgia, 'Times New Roman', serif; }
+.direction-signshop .site-header { height: 88px; border-bottom: 3px solid var(--foreground); }
+.direction-signshop .wordmark { font-family: Georgia, 'Times New Roman', serif; font-size: 39px; font-weight: 700; font-style: italic; letter-spacing: -.055em; }
+.direction-signshop .wordmark .logo-star { color: var(--green); transform: rotate(12deg); }
+.direction-signshop .desktop-nav { font-weight: 800; text-transform: uppercase; font-size: .72rem; letter-spacing: .08em; }
+.direction-signshop .desktop-nav a::after { height: 4px; bottom: 1px; background: var(--green); }
+.direction-signshop .motion-toggle,
+.direction-signshop .menu-toggle { border: 2px solid var(--foreground); background: var(--yellow); }
+.direction-signshop .header-contact { border: 2px solid var(--foreground); background: var(--green); color: var(--foreground); box-shadow: 4px 4px 0 var(--foreground); border-radius: 2px; font-weight: 800; }
+.direction-signshop .hero-topline { border-bottom: 2px solid var(--foreground); padding-bottom: 16px; }
+.direction-signshop .hero-body { min-height: 620px; display: block; padding-block: 54px 48px; }
+.direction-signshop .hero-copy { width: min(100%, 1180px); }
+.direction-signshop .hero h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(4.2rem, 8vw, 9.2rem); font-weight: 700; line-height: .93; letter-spacing: -.065em; max-width: 1180px; }
+.direction-signshop .hero h1 span:last-child { font-style: italic; color: var(--blue); text-shadow: 4px 4px 0 var(--yellow); }
+.direction-signshop .hero h1 em::after { display: none; }
+.direction-signshop .hero-description { margin-top: 36px; max-width: 520px; }
+.direction-signshop .hero-description p { color: var(--foreground); font-size: 1.08rem; }
+.direction-signshop .hero-art { display: none; }
+.direction-signshop .pill { border: 3px solid var(--foreground); border-radius: 2px; background: var(--yellow); color: var(--foreground); box-shadow: 5px 5px 0 var(--foreground); font-weight: 800; }
+.direction-signshop .pill:hover { background: var(--green); }
+.direction-signshop .quiet-link { text-decoration: none; border-bottom: 4px solid var(--green); font-weight: 800; }
+.direction-signshop .hero-transition { border: 0; background: var(--foreground); color: #f4f1df; margin-inline: calc(-1 * max(var(--gutter), calc((100vw - 1440px) / 2))); padding: 26px max(var(--gutter), calc((100vw - 1440px) / 2)); }
+.direction-signshop .hero-capabilities-label { color: var(--yellow); }
+.direction-signshop .hero-capabilities-list { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.15rem, 2vw, 1.8rem); }
+.direction-signshop .hero-capabilities-list li + li::before { background: var(--green); width: 8px; height: 8px; }
+.direction-signshop .hero-work-icon { border-radius: 2px; background: var(--yellow); color: var(--foreground); border: 2px solid #f4f1df; }
+.direction-signshop .work-section { padding-top: 92px; }
+.direction-signshop .section-heading { border-bottom: 3px solid var(--foreground); padding-bottom: 26px; }
+.direction-signshop .section-heading h2,
+.direction-signshop .services-intro h2,
+.direction-signshop .studio-main h2,
+.direction-signshop .page-intro h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; letter-spacing: -.05em; }
+.direction-signshop .section-heading h2 span { color: var(--blue); font-style: italic; }
+.direction-signshop .project-image,
+.direction-signshop .collection-image { border: 3px solid var(--foreground); box-shadow: 8px 8px 0 var(--foreground); }
+.direction-signshop .project-card:nth-child(even) .project-image { box-shadow: -8px 8px 0 var(--green); }
+.direction-signshop .project-open,
+.direction-signshop .collection-image>span { border-radius: 2px; background: var(--yellow); border: 2px solid var(--foreground); }
+.direction-signshop .project-number { display: none; }
+.direction-signshop .project-caption { padding-top: 24px; font-weight: 700; }
+.direction-signshop .services-section { border-top: 3px solid var(--foreground); }
+.direction-signshop .service-item { border-color: var(--foreground); }
+.direction-signshop .service-trigger { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.35rem, 2vw, 2rem); font-weight: 700; }
+.direction-signshop .service-number { color: var(--green); font-family: Arial, Helvetica, sans-serif; }
+.direction-signshop .service-tags span { border: 2px solid var(--foreground); border-radius: 2px; background: var(--yellow); color: var(--foreground); font-weight: 700; }
+.direction-signshop .studio-section { background: var(--blue); color: #f7f1dd; border-top: 5px solid var(--foreground); }
+.direction-signshop .studio-main h2 span { color: var(--yellow); font-style: italic; }
+.direction-signshop .studio-story p,
+.direction-signshop .process-grid p { color: #eef0e8; }
+.direction-signshop .process-grid article { border-color: #aebaf2; }
+.direction-signshop .process-grid .mono { color: var(--yellow); }
+.direction-signshop .studio-bottom { font-family: Arial, Helvetica, sans-serif; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.direction-signshop .contact-section { background: var(--yellow); color: var(--foreground); border-top: 5px solid var(--foreground); }
+.direction-signshop .contact-main h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; }
+.direction-signshop .contact-main h2 span { color: var(--green); font-style: italic; text-shadow: 3px 3px 0 var(--foreground); }
+.direction-signshop .contact-orb { border-radius: 2px; border: 3px solid var(--foreground); background: var(--green); box-shadow: 6px 6px 0 var(--foreground); }
+.direction-signshop .copy-email { border: 2px solid var(--foreground); border-radius: 2px; background: #fff7d6; }
+.direction-signshop .footer { border-top: 5px solid var(--foreground); }
+.direction-signshop .footer-wordmark { justify-content: flex-start; font-family: Georgia, 'Times New Roman', serif; font-style: italic; letter-spacing: -.075em; }
+.direction-signshop .footer-wordmark svg { color: var(--green); transform: rotate(10deg); }
+.direction-signshop .editorial-row,
+.direction-signshop .case-status,
+.direction-signshop .case-navigation { border-color: var(--foreground); }
+.direction-signshop .founder-note { background: var(--blue); color: #f7f1dd; border: 3px solid var(--foreground); box-shadow: 8px 8px 0 var(--green); }
+.direction-signshop .offering { border-color: var(--foreground); }
+.direction-signshop .case-cover img,
+.direction-signshop .case-gallery img { border: 3px solid var(--foreground); }
+@media (max-width: 760px) {
+  .direction-signshop .site-header { height: 78px; }
+  .direction-signshop .wordmark { font-size: 31px; }
+  .direction-signshop .hero-body { min-height: 0; padding-block: 38px 30px; }
+  .direction-signshop .hero h1 { font-size: clamp(3.1rem, 13.5vw, 5.8rem); }
+  .direction-signshop .hero h1 span:last-child { text-shadow: 2px 2px 0 var(--yellow); }
+  .direction-signshop .hero-transition { margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); }
+  .direction-signshop .project-image,
+  .direction-signshop .collection-image { box-shadow: 5px 5px 0 var(--foreground); }
+  .direction-signshop .contact-main h2 span { text-shadow: 2px 2px 0 var(--foreground); }
+}
