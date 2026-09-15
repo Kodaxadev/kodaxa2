@@ -1,0 +1,121 @@
+/* A single editorial handoff, not a paused marquee. Scoped to the studio hero. */
+.studio-site .hero-transition {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px 48px;
+  padding-block: 34px;
+  border-block: 1px solid var(--line);
+}
+
+.studio-site .hero-capabilities { min-width: 0; }
+
+.studio-site .hero-transition .hero-capabilities-label {
+  margin: 0 0 12px;
+  color: var(--muted, #5b6255);
+  font-size: .6875rem;
+  line-height: 1.6;
+  letter-spacing: .085em;
+}
+
+.studio-site .hero-capabilities-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: clamp(1.25rem, 2.1vw, 1.875rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -.035em;
+}
+
+.studio-site .hero-capabilities-list li {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.studio-site .hero-capabilities-list li + li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 3px;
+  height: 3px;
+  margin-inline: clamp(12px, 1.35vw, 20px);
+  border-radius: 50%;
+  background: #858b7b;
+}
+
+.studio-site .hero-work-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-shrink: 0;
+  min-height: 52px;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.studio-site .hero-work-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  color: var(--foreground);
+  background: var(--green);
+  transition: background 180ms, color 180ms;
+}
+
+.studio-site .hero-work-icon svg {
+  transition: transform 180ms ease-out;
+}
+
+.studio-site .hero-work-link:is(:hover, :focus-visible) .hero-work-icon {
+  color: var(--green);
+  background: var(--foreground);
+}
+
+.studio-site .hero-work-link:is(:hover, :focus-visible) svg {
+  transform: translateY(2px);
+}
+
+@media (max-width: 900px) {
+  .studio-site .hero-transition { gap: 24px; }
+  .studio-site .hero-capabilities-list { font-size: 1.25rem; }
+  .studio-site .hero-capabilities-list li + li::before { margin-inline: 12px; }
+}
+
+@media (max-width: 760px) {
+  .studio-site .hero-transition {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    padding-block: 26px;
+  }
+  .studio-site .hero-transition .hero-capabilities-label { margin-bottom: 14px; }
+  .studio-site .hero-capabilities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 7.75rem), 1fr));
+    gap: 8px 24px;
+    max-width: 400px;
+    font-size: 1.25rem;
+  }
+  .studio-site .hero-capabilities-list li + li::before { content: none; }
+  .studio-site .hero-work-link { justify-self: stretch; }
+  .studio-site .hero-work-icon { width: 48px; height: 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .studio-site .hero-work-icon,
+  .studio-site .hero-work-icon svg { transition: none; }
+  .studio-site .hero-work-link:is(:hover, :focus-visible) svg { transform: none; }
+}
+
+html[data-motion='off'] .studio-site .hero-work-icon,
+html[data-motion='off'] .studio-site .hero-work-icon svg { transition: none; }
+html[data-motion='off'] .studio-site .hero-work-link:is(:hover, :focus-visible) svg { transform: none; }
