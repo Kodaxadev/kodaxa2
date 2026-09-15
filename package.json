@@ -2,12 +2,10 @@
   "name": "kodaxa-studio",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=22.13.0"
-  },
+  "engines": { "node": ">=22.13.0" },
   "scripts": {
     "dev": "vinext dev",
-    "build": "vinext build",
+    "build": "npm run check && vinext build",
     "start": "node scripts/serve.mjs",
     "indexnow": "node scripts/indexnow.mjs",
     "lint": "oxlint",
